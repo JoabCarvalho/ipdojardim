@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Baby";
+    src: url(../Fonts/BabyGirly.otf);
+}
+@font-face {
+    font-family: "Please";
+    src: url(../Fonts/PleaseWriteMeSong.ttf);
+}
+:root{
+    --fonte_destaque: "Baby", cursive;
+    --fonte_texto: "Please", cursiva;
+}
+body{
+    /*background-color: rgb(210, 224, 165);*/
+    /*background-color: rgb(187, 241, 255);*/
+    background-image: linear-gradient(to bottom, rgb(187, 241, 255),rgb(255, 181, 152));
+    margin: 0px;
+    background-attachment: fixed;
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 20px;
+}
+header p{
+    margin: auto;
+    max-width: 900px;
+}
+nav {
+    min-width: 100px;
+    max-width: 900px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+nav .menu a{
+    text-decoration: none;
+    font-family: var(--fonte_texto);
+    font-weight: bold;
+    padding-left: 30px;
+}
+nav .menu a:hover{
+    color: rgb(73, 167, 255);
+    text-align: center;
+    transition-duration: .1s;
+    text-decoration: none;
+    font-family: var(--fonte_texto);
+    font-weight: bold;
+    border-radius: 10px;
+}
+nav img{
+    padding-top: 40px;
+    display: block;
+    margin: auto;
+    max-width: 120px;
+    /* também para fazer sobra em imagem
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.527));
+    */
+    filter: drop-shadow(0px 0px 8px rgb(255, 255, 255));
+}
+nav h1{
+    font-family: var(--fonte_destaque), Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 3.5em;
+    text-align: center;
+    margin: auto;
+    text-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
+nav h2{
+    font-family: var(--fonte_texto), Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    text-align: center;
+    margin: auto;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255);
+}
+main {
+    background-color: rgba(255, 210, 192, 0.8);
+    margin: auto;
+    min-width: 100px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+main .conteiner-principal{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+main > h2{
+    padding-top: 20px;
+    margin-bottom: -15px;
+    font-size: 1.8em;    
+    text-align: center;
+    font-family: "Baby";
+}
+main > h3{
+    font-size: 1.4em;    
+    text-align: center;
+    font-family: "Please";
+    font-weight: bold;
+}
+main .caixa{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.89);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0px 25px;
+    margin-bottom: 40px;
+}
+main .caixa ul{
+    margin-left: -25px;
+}
+main .caixa li{
+    padding-bottom: 5px;
+}
+main .redeSociais{
+    display: block;
+    padding: 10px 25px;
+    margin-bottom: 40px;
+}
+main .redeSociais li{
+    padding-bottom: 20px;
+}
+main .caixa h2{
+    font-family: var(--fonte_texto), Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1.6em;
+}
+main .caixa h3{
+    font-family: var(--fonte_texto), Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1.4em;
+}
+main .caixa > ul, ol, li{
+    font-family: var(--fonte_texto), Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    padding-bottom: 0px;
+}
+
+main p{
+    text-indent: 40px;
+    padding: 30px;
+    text-align: justify;
+}
+main a{
+    font-family: "Please";
+    font-weight: bold;
+    text-decoration: none;
+    text-indent: 40px;
+    text-align: justify;
+}
+main a:hover{
+    color: rgb(73, 167, 255);
+    text-align: center;
+    transition-duration: .1s;
+    font-family: var(--fonte_texto);
+    font-weight: bold;
+    text-decoration: none;
+    text-indent: 40px;
+    text-align: justify;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 102px;
+}
+footer p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
