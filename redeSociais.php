@@ -18,8 +18,7 @@
             <a href="index.php">Início</a>
             <a href="noQueCremos.php">No que cremos</a>
             <a href="aconselhamento.php">Aconselhamento</a>
-            <a href="redeSociais.php">Redes Sociais</a>
-        </div>
+            <a href="redeSociais.php">Redes Sociais e Devocionais</a>        </div>
         <div>                  
             <img src="Imagens/Logo/Ico/Logo192x192.png" alt="Logo IP do Jardim">
             <h1>Igreja Presbiteriana do Jardim</h1>

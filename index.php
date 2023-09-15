@@ -1,8 +1,8 @@
 <?php
     include_once('config.php');
-    $sql = "SELECT *, DATE_FORMAT(data_culto, '%d/%m/%Y') AS data_formatada FROM culto_mensagens ORDER BY id ASC LIMIT 7";
+    $sql = "SELECT *, DATE_FORMAT(data_culto, '%d/%m/%Y') AS data_formatada FROM culto_mensagens ORDER BY id DESC LIMIT 6";
     $result = $conexao->query($sql);
-    $user_data = mysqli_fetch_assoc($result);
+    
  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,8 +24,7 @@
             <a href="index.php">Início</a>
             <a href="noQueCremos.php">No que cremos</a>
             <a href="aconselhamento.php">Aconselhamento</a>
-            <a href="redeSociais.php">Redes Sociais</a>
-        </div>
+            <a href="redeSociais.php">Redes Sociais e Devocionais</a>        </div>
         <div>                  
             <img src="Imagens/Logo/Ico/Logo192x192.png" alt="Logo IP do Jardim">
             <h1>Igreja Presbiteriana do Jardim</h1>
@@ -57,6 +56,7 @@
 */            
             /**Abaixo com WHILE */
             while($user_data = mysqli_fetch_assoc($result)) {
+
                 echo "<div class = caixa>";
                 echo "<h2>Culto Solene " .$user_data['data_formatada']. "</h2>";
                 echo "<h3>" .$user_data['titulo']. "</h3>";
@@ -65,7 +65,10 @@
                 echo "<ol>";
                 echo "<li>" .$user_data['texto_divisao_1']. "</li>";
                 echo "<li>" .$user_data['texto_divisao_2']. "</li>";
-                echo "<li>" .$user_data['texto_divisao_3']. "</li>";
+                    if(!empty($user_data['texto_divisao_3'])){
+                        echo "<li>" .$user_data['texto_divisao_3']. "</li>";
+                } else {}
+                
                     if(!empty($user_data['texto_divisao_4'])){
                         echo "<li>" .$user_data['texto_divisao_4']. "</li>";
                 } else {}
