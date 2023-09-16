@@ -38,28 +38,31 @@
                     <input type="radio" id="feminino" name="sexo" value="F" required>
                     <label for="feminino">Feminino</label>
                     <br><br><br>       
-
-                <div class="inputBox">
-                    <input type="text" name="nome_completo" id="nome_completo" class="inputUser" required>
-                    <label for="nome_completo" class="labelInput">Nome Completo:</label>
-                </div>
-                <br><br>
-
-                <div class="inputBox">
-                    <input type="text" name="conhecido" id="conhecido" class="inputUser" required>
-                    <label for="conhecido" class="labelInput">Conhecido como:</label>
-                </div>
-                <br><br>  
-
-                <div class="inputBox">
-                    <input type="tel_celular" name="tel_celular" id="tel_celular" class="inputUser" required>
-                    <label for="tel_celular" class="labelInput">Celular:</label>
-                </div>
-                <br><br>
+                <table>
+                    <tr>
+                        <td class="nome_completo">
+                            <div class="inputBox">
+                                <input type="text" name="nome_completo" id="nome_completo" class="inputUser" required>
+                                <label for="nome_completo" class="labelInput">Nome:</label>
+                            </div>
+                        </td>
+                        <td class="conhecido">
+                            <div class="inputBox">
+                                <input type="text" name="conhecido" id="conhecido" class="inputUser" required>
+                                <label for="conhecido" class="labelInput">Conhecido por:</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                    <div class="inputBox">
+                        <input type="tel_celular" name="tel_celular" id="tel_celular" class="inputUser" required>
+                        <label for="tel_celular" class="labelInput">Celular:</label>
+                    </div>
+                    <br><br>
 <!--
                     <label for="data_nascimento"><b>Data de Nascimento:&ensp;</b></label>
                     <input type="date" name="data_nascimento" id="data_nascimento" required>
-                <br><br>
+                    <br><br>
 -->
                 <table>
                     <tr>
@@ -82,7 +85,7 @@
                         <td class="endereco">
                             <div class="inputBox">
                                 <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                                <label for="endereco" class="labelInput">Endereço (sem número):</label>
+                                <label for="endereco" class="labelInput">Endereço:</label>
                             </div>
                         </td>
                         <td class="numero">
