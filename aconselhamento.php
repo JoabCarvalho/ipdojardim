@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP do Jardim</title>
     <link rel="shortcut icon" href="Imagens/Logo/Ico/Logo.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Style/Style.css">
 </head>
 <body>
@@ -26,99 +27,96 @@
             <h2>Av. Ricardo Loureiro Cavalcante, nº 133, Jardim Aeroporto, Bayeux</h2>
         </div>
     </nav>
-    <main> 
+    <main class="conteiner-principal"> 
     <h2>Aconselhamento Pastoral</h2>
-    <form action="cadUsu.php" method="POST">
-            <fieldset>
-                <legend><b>Mande uma mensagem para o nosso pastor</b></legend>
-                <br>
-                <label for="sexo">Sexo: </label>
-                    <input type="radio" id="masculino" name="sexo" value="M" required>
-                    <label for="masculino">Masculino</label>                    
-                    <input type="radio" id="feminino" name="sexo" value="F" required>
-                    <label for="feminino">Feminino</label>
-                    <br><br><br>       
-                <table>
-                    <tr>
-                        <td class="nome_completo">
-                            <div class="inputBox">
-                                <input type="text" name="nome_completo" id="nome_completo" class="inputUser" required>
-                                <label for="nome_completo" class="labelInput">Nome:</label>
-                            </div>
-                        </td>
-                        <td class="conhecido">
-                            <div class="inputBox">
-                                <input type="text" name="conhecido" id="conhecido" class="inputUser" required>
-                                <label for="conhecido" class="labelInput">Conhecido por:</label>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                    <div class="inputBox">
-                        <input type="tel_celular" name="tel_celular" id="tel_celular" class="inputUser" required>
-                        <label for="tel_celular" class="labelInput">Celular:</label>
+    <form action="" method="POST">
+        <div class="container">
+            <br>
+            <legend><b>Mande uma mensagem para o nosso pastor</b></legend>
+            <br><br>
+            <div class="row">
+                <div class="col">
+                    <label for="sexo">Sexo: </label>
+                    <div>
+                        <input type="radio" id="masculino" name="sexo" value="M" required>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo" value="F" required>
+                        <label for="feminino">Feminino</label>
                     </div>
-                    <br><br>
-<!--
-                    <label for="data_nascimento"><b>Data de Nascimento:&ensp;</b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" required>
-                    <br><br>
--->
-                <table>
-                    <tr>
-                        <td class="cidade">
-                            <div class="inputBox">
-                                <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                                <label for="cidade" class="labelInput">Cidade:</label>
-                            </div>
-                        </td>
-                        <td class="bairro">
-                            <div class="inputBox">
-                                <input type="text" name="bairro" id="bairro" class="inputUser" required>
-                                <label for="bairro" class="labelInput">Bairro:</label>
-                            </div>
-                        </td>
-                    </tr>
-                    </table>
-                    <table>
-                    <tr>
-                        <td class="endereco">
-                            <div class="inputBox">
-                                <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                                <label for="endereco" class="labelInput">Endereço:</label>
-                            </div>
-                        </td>
-                        <td class="numero">
-                            <div class="inputBox">
-                                <input type="text" name="numEndereco" id="numEndereco" class="inputUser" required>
-                                <label for="numEndereco" class="labelInput">Nº:</label>
-                            </div>
-                        </td>
-                    </tr>
-                    </table>
-                    <table>
-                    <tr>
-                        <td class="complemento">
-                            <div class="inputBox">
-                                <input type="text" name="complemento" id="complemento" class="inputUser" required>
-                                <label for="complemento" class="labelInput">Complemento:</label>
-                            </div>
-                        </td>
-                        <td class="cep">
-                            <div class="inputBox">
-                                <input type="text" name="cep" id="cep" class="inputUser" required>
-                                <label for="cep" class="labelInput">CEP:</label>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <br><br>
-                <input type="submit" name="submit" id="submit" value="Enviar">
-            </fieldset>
-        </form>
+                </div>
+                <div class="col">
+                    <label for="conhecido">Nome:</label>
+                    <div><input type="text" name="conhecido" id="conhecido" required></div>
+                </div>                    
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <label for="celular">Celular:</label>
+                    <div><input type="tel" name="celular" id="celular" required></div>
+                </div>
+                <div class="col">
+                    <label for="whats">É WhatsApp? </label>
+                    <div>
+                        <input type="radio" id="whats_sim" name="whats" value="S" required>
+                        <label for="whats_sim">Sim</label>
+                        <input type="radio" id="whats_nao" name="whats" value="N" required>
+                        <label for="whats_nao">Não</label>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col">
+                    <label for="cep">CEP:</label>
+                    <div><input type="text" name="cep" id="cep" required></div>
+                </div>
+                <div class="col">
+                    <label for="cidade">Cidade:</label>
+                    <div><input type="text" name="cidade" id="cidade" required></div>
+                </div>
+                <div class="col">
+                    <label for="bairro">Bairro:</label>
+                    <div><input type="text" name="bairro" id="bairro" required></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="rua">Rua:</label>
+                    <div><input type="text" name="rua" id="rua" required></div>
+                </div>
+                <div class="col">
+                    <label for="numero">Número:</label>
+                    <div><input type="text" name="numero" id="numero" required></div>
+                </div>
+                <div class="col">
+                    <label for="complemento">Complemento:</label>
+                    <div><input type="text" name="complemento" id="complemento" required></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <label for="mensagem">Mensagem:</label>
+                        <textarea name="mensagem" id="mensagem" rows="10"></textarea>
+                    <br>
+                </div>
+            </div>
+
+            <br>
+            
+        <input type="submit" name="submit" id="submit" value="Enviar">
+    </form>
     </main>
-    <footer>
-        <p> Desenvolvido pela Igreja Presbiteriana do Jardim</p>
-    </footer>
+<footer>
+    <p> Desenvolvido pela Igreja Presbiteriana do Jardim</p>
+</footer>
 </body>
 </html>

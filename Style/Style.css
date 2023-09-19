@@ -54,19 +54,20 @@ nav img{
     padding-top: 40px;
     display: block;
     margin: auto;
-    width: 15%;
-    /* também para fazer sobra em imagem
+    max-width: 12%;
+/* também para fazer sobra em imagem
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.527));
-    */
+*/
     filter: drop-shadow(0px 0px 8px rgb(255, 255, 255));
 }
 nav h1{
     font-family: var(--fonte_destaque), Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
     font-size: 3.8em;
+    font-weight: lighter;
     text-align: center;
     margin: auto;
-    max-width: 75%;
+    width: 75%;
     text-shadow: 0px 0px 8px rgb(255, 255, 255);
     padding-top: 30px;
 }
@@ -81,7 +82,7 @@ nav h2{
 main {
     background-color: rgba(255, 255, 255, 0.534);
     margin-inline: auto;
-    width: 70%;
+    width: 55%;
     border-radius: 10px;
     box-shadow: 0px 0px 8px rgb(0, 0, 0);
     margin-top: 80px;
@@ -89,7 +90,7 @@ main {
     padding-bottom: 30px;
     padding-inline: 20px;
 }
-main .conteiner-principal, .aconselhamento{
+main .conteiner-principal{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -173,6 +174,10 @@ main .redeSociais{
 main .redeSociais li{
     padding: 15px;
 }
+main .aconselhamento{
+    display: flex;
+    justify-content: space-evenly;
+}
 fieldset{
     border: 3px solid dodgerblue;
     border-radius: 8px;
@@ -189,33 +194,9 @@ legend{
     font-size: 1.3em;   
     font-family: var(--fonte_texto);         
 }
-.inputBox{
-    position: relative;
-}
-.inputUser{
-    background: none;
-    border: none;
-    border-bottom: 1px solid rgb(79, 185, 255);
-    outline: none;
-    color: rgb(0, 0, 0);
-    font-size: .7em;
+#mensagem{
     width: 100%;
-    letter-spacing: 2px;
-}
-.labelInput{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    pointer-events: none;
-    transition: .5s;
-    font-size: 12px;
-    padding-right: 70px;
-}
-.inputUser:focus ~ .labelInput,
-.inputUser:valid ~ .labelInput{
-    top: -20px;
-    font-size: .9em;
-    color: rgb(0, 87, 116);
+    border-radius: 8px;
 }
 #submit{
     background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
@@ -230,44 +211,6 @@ legend{
 }
 #submit:hover{
     background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
-}
-.nome_completo{
-    width: 550px;
-    padding-bottom: 40px;
-    padding-right: 40px;
-}
-.conhecido{
-    width: 300px;
-    padding-bottom: 40px;
-}
-#tel_celular{
-    width: 20%;
-}
-.cidade{
-    width: 500px;
-    padding-bottom: 40px;
-    padding-right: 40px;
-}
-.bairro{
-    width: 500px;
-    padding-bottom: 40px;
-}
-.endereco{
-    width: 500px;
-    padding-bottom: 40px;
-    padding-right: 30px;
-}.numero{
-    width: 500px;
-    padding-bottom: 40px;
-}
-.complemento{
-    width: 500px;
-    padding-bottom: 40px;
-    padding-right: 30px;
-}
-.cep{
-    width: 500px;
-    padding-bottom: 40px;
 }
 footer{
     background-color: black;
