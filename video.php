@@ -30,14 +30,14 @@
         </div>
     </nav>
     <main> 
-        <h2>Conheça-nos nas Redes Sociais</h2>
-        <br><br>
-        <div class="redeSociais">
-        <ul>
-            <li><a href="https://www.instagram.com/ipdojardim/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@ipdojardim" target="_blank">YouTube</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1GcUW57k94WoUZ29WeGNGF2a259Zd2oDD" target="_blank">Devocional entre Famílias</a></li>
-        </ul>
+        <h2>Pregação</h2>
+        <br><br><br>
+        <div class="conteiner-principal">
+        <div class="video">
+            <div class="video-area">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CSLu4_AnuBs?si=McnyyJVe5tI3Q-q_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+            </div>
+        </div>
         </div>
     </main>
     <footer>
