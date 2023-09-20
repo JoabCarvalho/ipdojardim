@@ -1,3 +1,9 @@
+<?php
+    include_once('config.php');
+    $sql = "SELECT DATE_FORMAT(m.data_nascimento, '%d/%m/%Y') AS data_formatada, m.conhecido FROM membros m WHERE MONTH(m.data_nascimento) = MONTH(NOW()) ORDER BY data_formatada";
+    $result = $conexao->query($sql);
+    
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +28,6 @@
             <a href="video.php">Pregação</a>
             <a href="aniversariantes.php">Aniversariantes</a>
             <a href="redeSociais.php">Redes Sociais e Devocionais</a>
-        <div>
         <div>                  
             <img src="Imagens/Logo/Ico/Logo192x192.png" alt="Logo IP do Jardim">
             <h1>Igreja Presbiteriana do Jardim</h1>
@@ -30,14 +35,16 @@
         </div>
     </nav>
     <main> 
-        <h2>Conheça-nos nas Redes Sociais</h2>
-        <br><br>
-        <div class="redeSociais">
-        <ul>
-            <li><a href="https://www.instagram.com/ipdojardim/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@ipdojardim" target="_blank">YouTube</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1GcUW57k94WoUZ29WeGNGF2a259Zd2oDD" target="_blank">Devocional entre Famílias</a></li>
-        </ul>
+        <h2>Aniversariantes do Mês</h2>
+        <br><br><br><br>
+        <div class="aniversariantes">
+            <?php
+            
+                while($user_data = mysqli_fetch_assoc($result)) {
+                    echo "<li> " .$user_data['data_formatada']. " - " .$user_data['conhecido']. "</li>";
+                }
+            
+            ?>
         </div>
     </main>
     <footer>

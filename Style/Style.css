@@ -16,6 +16,7 @@ body{
     /*background-color: rgb(187, 241, 255);*/
     background-image: linear-gradient(to bottom, rgb(187, 241, 255),rgb(255, 181, 152));
     margin: 0px;
+    
 }
 header{
     background-color: black;
@@ -54,7 +55,7 @@ nav img{
     padding-top: 40px;
     display: block;
     margin: auto;
-    max-width: 12%;
+    width: 10%;
 /* também para fazer sobra em imagem
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.527));
 */
@@ -167,6 +168,22 @@ main .caixa ul{
     padding-bottom: 5px;
     letter-spacing: 1px;
 }
+main .aniversariantes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-inline: 50px;
+    margin-bottom: 50px;
+}
+main .aniversariantes h2{
+    padding-bottom: 50px;
+}
+main .aniversariantes li{
+    padding: 5px;
+    font-family: var(--fonte_texto);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 main .redeSociais{
     display: block;
     font-size: 1.2em;
@@ -178,13 +195,6 @@ main .aconselhamento{
     display: flex;
     justify-content: space-evenly;
 }
-fieldset{
-    border: 3px solid dodgerblue;
-    border-radius: 8px;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    padding-inline: 30px;
-}
 legend{
     border: 1px solid dodgerblue;
     padding: 10px;
@@ -194,9 +204,47 @@ legend{
     font-size: 1.3em;   
     font-family: var(--fonte_texto);         
 }
+input{
+    padding: 3px;
+    padding-inline: 10px;
+}
+label{
+    margin-right: 5px;
+}
+#conhecido{
+    width: 100%;
+}
+#celular{
+    width: 100%;
+    text-align: right;
+}
+#whats{
+    width: 100%;
+}
+#cep{
+    width: 100%;
+    text-align: right;
+}
+#cidade{
+    width: 100%;
+}
+#bairro{
+    width: 100%;
+}
+#rua{
+    width: 100%;
+}
+#numero{
+    width: 100%;
+}
+#complemento{
+    width: 100%;
+}
 #mensagem{
     width: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-inline: 10px;
 }
 #submit{
     background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
@@ -220,4 +268,18 @@ footer{
 footer p{
     margin-top: 0px;
     margin-bottom: 0px;
+}
+.video{
+    width: 700px;
+}
+.video-area{
+    position: relative;
+    
+    padding: 0px 0px 56.25%;
+}
+.video-area iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
