@@ -2,8 +2,8 @@
     include_once('config.php');
     $sql = "SELECT *, DATE_FORMAT(data_culto, '%d/%m/%Y') AS data_formatada FROM culto_mensagens ORDER BY id DESC LIMIT 6";
     $result = $conexao->query($sql);
-    
  ?>
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,6 +28,7 @@
             <a href="video.php">Pregação</a>
             <a href="aniversariantes.php">Aniversariantes</a>
             <a href="redeSociais.php">Redes Sociais e Devocionais</a>
+        </div>
         <div>                 
             <img src="Imagens/Logo/Ico/Logo192x192.png" alt="Logo IP do Jardim">
             <h1>Igreja Presbiteriana do Jardim</h1>

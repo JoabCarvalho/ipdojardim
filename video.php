@@ -1,3 +1,9 @@
+<?php
+    include_once('config.php');
+    $sql = "SELECT incorporar_youtube FROM video_pregacao ORDER BY id DESC LIMIT 1";
+    $result = $conexao->query($sql); 
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +28,7 @@
             <a href="video.php">Pregação</a>
             <a href="aniversariantes.php">Aniversariantes</a>
             <a href="redeSociais.php">Redes Sociais e Devocionais</a>
-        <div>
+        </div>
         <div>                  
             <img src="Imagens/Logo/Ico/Logo192x192.png" alt="Logo IP do Jardim">
             <h1>Igreja Presbiteriana do Jardim</h1>
@@ -31,11 +37,16 @@
     </nav>
     <main> 
         <h2>Pregação</h2>
-        <br><br><br>
+        <br>
         <div class="conteiner-principal">
         <div class="video">
             <div class="video-area">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/CSLu4_AnuBs?si=McnyyJVe5tI3Q-q_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                <?php
+                    while($user_data = mysqli_fetch_assoc($result)) {
+                        echo $user_data['incorporar_youtube'];
+                    }
+                ?>
+            
             </div>
         </div>
         </div>

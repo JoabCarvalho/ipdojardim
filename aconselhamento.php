@@ -1,3 +1,28 @@
+<?php
+    if(isset($_POST['submit']))
+    {
+        include_once('config.php');
+
+        $data_hora = date("Y-m-d H:i:s");
+        $sexo = $_POST['sexo'];
+        $conhecido = $_POST['conhecido'];
+        $tel_celular = $_POST['celular'];
+        $whatsapp = $_POST['whats'];
+        $end_cep = $_POST['cep'];
+        $end_cidade = $_POST['cidade'];
+        $end_bairro = $_POST['bairro'];
+        $end_rua = $_POST['rua'];
+        $end_numero = $_POST['numero'];
+        $end_complemento = $_POST['complemento'];
+        $mensagem = $_POST['mensagem'];
+
+        $result = mysqli_query($conexao, "INSERT INTO aconselhamento_pastoral (data_registro,sexo,conhecido,tel_celular,whatsapp,end_cep,end_cidade,end_bairro,end_rua,end_numero,end_complemento,mensagem)
+        VALUES ('$data_hora','$sexo','$conhecido','$tel_celular','$whatsapp','$end_cep', '$end_cidade','$end_bairro','$end_rua','$end_numero','$end_complemento','$mensagem')");
+
+        header('Location: aconselhamento.php');
+    }
+ ?>
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +31,7 @@
     <title>IP do Jardim</title>
     <link rel="shortcut icon" href="Imagens/Logo/Ico/Logo.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="Style/Style.css">
+    <link rel="stylesheet" href="Style/Style.css">    
 </head>
 <body>
     <header>
@@ -46,7 +71,7 @@
                         <label for="feminino">Feminino</label>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col col-lg-7">
                     <label for="conhecido">Nome:</label>
                     <div><input type="text" name="conhecido" id="conhecido" required></div>
                 </div>                    
@@ -55,7 +80,7 @@
             <br>
 
             <div class="row">
-                <div class="col">
+                <div class="col col-lg-3">
                     <label for="celular">Celular:</label>
                     <div><input type="tel" name="celular" id="celular" required></div>
                 </div>
@@ -73,7 +98,7 @@
             <br>
             
             <div class="row">
-                <div class="col">
+                <div class="col col-lg-2">
                     <label for="cep">CEP:</label>
                     <div><input type="text" name="cep" id="cep" required></div>
                 </div>
@@ -81,7 +106,7 @@
                     <label for="cidade">Cidade:</label>
                     <div><input type="text" name="cidade" id="cidade" required></div>
                 </div>
-                <div class="col">
+                <div class="col col-lg-4">
                     <label for="bairro">Bairro:</label>
                     <div><input type="text" name="bairro" id="bairro" required></div>
                 </div>
@@ -92,11 +117,11 @@
                     <label for="rua">Rua:</label>
                     <div><input type="text" name="rua" id="rua" required></div>
                 </div>
-                <div class="col">
+                <div class="col col-lg-2">
                     <label for="numero">Número:</label>
                     <div><input type="text" name="numero" id="numero" required></div>
                 </div>
-                <div class="col">
+                <div class="col col-lg-4">
                     <label for="complemento">Complemento:</label>
                     <div><input type="text" name="complemento" id="complemento" required></div>
                 </div>

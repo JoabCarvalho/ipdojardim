@@ -25,8 +25,12 @@ header{
     padding: 1px;
     margin-bottom: 20px;
 }
-header p{
+p{
     margin: auto;
+    font-size: 1em;
+    font-family: var(--fonte_texto);
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 nav {
     max-width: 75%;
@@ -96,10 +100,11 @@ main .conteiner-principal{
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: 300px;
 }
 main > h2{
     padding-top: 30px;
-    margin-bottom: -15px;
+    margin-bottom: 15px;
     font-size: 2.5em;    
     text-align: center;
     font-family: "Please";
@@ -113,7 +118,7 @@ main > h3{
     letter-spacing: 2px;
 }
 main > p{
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-indent: 40px;
     padding-inline: 30px;
     text-align: justify;
@@ -172,14 +177,21 @@ main .aniversariantes{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-inline: 50px;
-    margin-bottom: 50px;
-}
-main .aniversariantes h2{
-    padding-bottom: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-inline: 10px;
+    height: 300px;
 }
 main .aniversariantes li{
     padding: 5px;
+    padding-right: 10px;
+    font-family: var(--fonte_texto);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+main .aniversariantes p{
+    padding: 5px;
+    margin-left: 21px;
     font-family: var(--fonte_texto);
     font-weight: bold;
     letter-spacing: 1px;
@@ -187,6 +199,7 @@ main .aniversariantes li{
 main .redeSociais{
     display: block;
     font-size: 1.2em;
+    min-height: 300px;
 }
 main .redeSociais li{
     padding: 15px;
@@ -246,6 +259,10 @@ label{
     padding: 5px;
     padding-inline: 10px;
 }
+#incorporar{
+    width: 100%;
+    font-size: 0.7em;
+}
 #submit{
     background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
     width: 100%;
@@ -270,11 +287,10 @@ footer p{
     margin-bottom: 0px;
 }
 .video{
-    width: 700px;
+    width: 900px;
 }
 .video-area{
     position: relative;
-    
     padding: 0px 0px 56.25%;
 }
 .video-area iframe{
